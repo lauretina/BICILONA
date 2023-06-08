@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadatos description y title para SEO-->
+    <meta name="description" content="¡Atención, ciclistas!¿Queréis uniros a la comunidad de bikers más top? Foro, tienda y buena onda, ¡lo tenemos todo! Compra y vende productos de segunda mano.">
+    <title>BiciLona, foro y tienda para una comunidad sostenible urbana de ciclistas</title>
+    <!-- Font Awesome para los iconos-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> 
+    <!-- Cookies -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Se usa estructura jerárquica con etiquetas semánticas: header, nav, main, section y footer-->
+    <header>
+        <!-- icono burger oculta para pantalla grande -->
+        <div class="barranavegacion"><span id="btn-menu"><i class="fa fa-bars fa-sm" id="cruz"></i></span> BiciLona</div> 
+        <nav class="bicilona">
+            <!-- menu en pantalla grande desplegado y en pequeña en bloque -->
+            <h2><a href="#">BiciLona</a></h2>
+            <ul class="menu" id="menu">
+                <li class="menu-item">
+                    <a href="Vista/formularioregistro.php" class="menu-link">Tienda</a>
+                </li>
+                <li class="menu-item">
+                    <a href="Vista/formularioregistro.php" class="menu-link">Foro</a>
+                </li>
+                <li class="menu-item">
+                    <a href="Vista/formularioregistro.php" class="menu-link">Usuarios</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+     <!-- Contenido principal-->
+    <main>
+        <h1>BICIS URBANAS</h1>
+        <section class="presentacion">
+            <div class="imagenportada">
+                <h2>Movilidad sostenible a tu alcance</h2>
+            </div>
+            <div class="dosIconos">
+                <figure>
+                    <img src="src/images/usuarios_foro.webp" alt="comunidad opinion">
+                    <figcaption>Comparte tus rutas, trucos, risas y consejos en nuestro foro
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="src/images/segunda_mano.webp" alt="venta segunda mano">
+                    <figcaption>Compra,vende e intercambia productos en nuestra tienda
+                    </figcaption>
+                </figure>
+            </div>
+            <h2>Descubre un mundo de posibilidades sobre ruedas</h2>  
+            <h3>¡NO LE DES MÁS VUELTAS Y ÚNETE A NUESTRA COMUNIDAD!</h3>
+            <a href="Vista/formularioregistro.php" class="boton">COMIENZA TU AVENTURA</a>
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <div><a href="Vista/avisolegal.php">Aviso legal</a></div>
+        <div><a href="Vista/politicaprivacidad.php">Política de privacidad</a></div>
+        <div><a href="Vista/cookies.php">Política de cookies</a></div> 
+        <div>&#169; 2023 BiciLona</div>
+     </footer>
+    <!-- Script cookies-->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+     window.cookieconsent.initialise({
+         "palette": {
+             "popup": {
+                 "background": "#439381",
+                 "text": "#ffffff"
+             },
+             "button": {
+                 "background": "#A5610C",
+                 "text": "#ffffff"
+             }
+         },
+         "theme": "classic",
+         "type": "opt-out",
+         "content": {
+             "message": "Utilizamos cookies propias y de terceros para mejorar la experiencia del usuario a través de su navegación. Si continúas navegando aceptas su uso. ",
+             "deny": "Rechazar",
+             "allow": "Aceptar ",
+             "link": "Política de cookies",
+             "href": "Vista/cookies.php"
+         }
+     });
+    </script>
+    <!-- Javascript -->
+    <script src="js/javascript.js"></script>
+</body>
+</html>

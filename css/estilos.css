@@ -1,0 +1,325 @@
+@charset "utf-8";
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+html{
+    font-family: Montserrat, sans-serif;
+}
+body {
+    box-sizing: inherit;
+    background-color:#19437E;
+}
+/* color para los elementos de texto*/
+h1, h2, h3, h4, p, ul, li {
+    color: white;
+}
+/*centro y separo los encabezados*/
+h1, h2, h3, h4 {
+    text-align: center;
+    padding: 0.5em;
+}
+/*coloco una imagen en la página principal con un texto encima con fondo rojo borroso*/
+.imagenportada {
+    height: 35vh;
+    background-image: url(../src/images/bicicleta_salon.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 129px 0 0 0;
+}
+.imagenportada > h2 {
+    padding: 10px;
+    background-color: rgb(185 24 24 / 40%);
+    backdrop-filter: blur(6px);
+    margin: 0 auto;
+    width: 60%;
+}
+/* estilo para los enlaces*/
+a{
+    text-decoration: none;
+    color:white;
+}
+/* SECCIÓN DE PRESENTACIÓN DE LA INFORMACIÓN */
+section.presentacion{
+    text-align:center;
+}
+/* el botón CTA con enlace para empezar a usar la web*/
+section.presentacion a.boton{
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 7px 22px;
+}
+/*al pasar por encima con el ratón cambia de color*/
+section.presentacion a.boton:hover{
+    background: grey;
+    color: white;
+}
+/*separación entre h3 y el botón CTA, color para h3*/
+section.presentacion h3{
+    color:#d6b832;
+    margin-bottom: 2em;
+    font-size: 1em;
+}
+section.presentacion h4.erroneo{
+    color:#ff3535;  /*mostrará el mensaje de error en rojo*/
+}
+section.presentacion h4.exito {
+    color: #10bb10;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+/*en dispositivos móviles el menú está escondido*/
+.menu {
+    list-style: none;
+    background: #054c57;
+    border: 2px solid rgb(255, 255, 255);
+    width: 100vw;
+    margin-left: -120%; /*escondido*/
+    text-align: center;
+    padding: 10px;
+}
+/*se muestra al añadir clase siguiente "mostrar" al clickar sobre la burger*/
+.mostrar {
+    margin-left: 0; /*mostrado*/
+}
+/*Barra navegación con icono Burger y nombre BICILONA pequeño*/
+.barranavegacion {
+    padding: 20px;
+    display: block;
+    color: white;
+    font-size: 1.5em;
+    width: 100vw;
+}
+.barranavegacion span{
+    cursor: pointer;
+}
+/*los enlaces del menú en el menú burger al pasar por encima*/
+.menu-link:hover{
+    color: #d6b832;
+}
+.bicilona h2{
+    display:none;
+}
+/*media queries para definir menú en PANTALLA GRANDE*/
+@media only screen and (min-width: 1024px) {
+    /*menú burger no se verá*/
+    .barranavegacion {
+        display: none;
+    }
+    /*pero sí se verá el menú extendido con y alineado en la parte superior dentro de bicilona con su título*/
+    .bicilona{
+        display:flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .menu {
+        margin-left: 0;
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: end;
+        background:none;
+        padding:40px;
+        border: none;
+    }
+    .menu-link {
+        color: black;
+        padding: 20px;
+        border: 1px solid black;
+        padding:10px;
+        background:white;
+        margin: 0 8px;
+        border-radius: 4px;
+    }
+    /*los enlaces del menú de escritorio al pasar por encima*/
+    .menu-link:hover{
+        color: white;
+        background: #b7418c;
+        font-weight: bold;
+    }
+    .bicilona h2{
+        display:block;
+        margin: 38px;
+    }
+}
+
+/*FORMULARIOS ZONA REGISTRO Y LOGIN*/
+/*div con título y formulario centrado y en dispuesto en columna*/
+.registrologin {
+	display: flex; 
+	flex-direction: column; 
+    align-items: center;
+    margin: 2em;
+}
+/*los huecos del form también y con espacio entre ellas*/
+.registrologin form input,textarea {
+    display: flex; 
+	flex-direction: column; 
+    align-items: center;
+    padding: 1em 3em 1em 3em;   
+    margin: 1em;
+}
+/*alinear botón de enviar formulario*/
+.envia{
+	display: flex; 
+	justify-content: center;
+}
+/*enlace del título del formulario para ir a login/registro y ratón por encima*/ 
+div.registrologin a{
+    color: #cb8a72;
+    font-style: italic;
+}
+div.registrologin a:hover{
+    color: #d35425;
+}
+div.registrologin h3 {
+    color: #ffffff;
+    margin: 0;
+}
+/*botón de formulario para enviar*/
+.registrologin form input[type="submit"] {
+    width: 60%;
+    padding: 12px;
+    background-color: #b7418c;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px;
+}
+.registrologin form input[type="submit"]:hover {
+    background-color: #86145c;
+}
+
+
+/*FOOTER CON PÁGINAS DE POLÍTICAS LEGALES*/
+/*footer con atributos generales,para pantalla de móvil coge display: block por defecto*/
+footer{
+    text-align:center;
+    color: white;
+    font-weight: bold;
+    margin: 6em 0 2em 0;
+}
+footer div {
+    padding: 0.2em;
+}
+footer a:hover{
+    color: #b7418c;
+}
+/*maquetación apartado legal justificado, margen para móvil*/
+section.politicas p{
+    text-align: justify;
+    padding: 0 1em 0 1em;
+}
+section.politicas ul, li {
+    margin-left: 1.2em;
+    padding: 0.3em;
+}
+.politicas h2{
+    text-align: left;
+}
+/*footer extendido y maquetación apartado legal a partir de tablet*/
+@media only screen and (min-width: 768px){
+    footer {
+      display: flex;
+      align-items: baseline;
+    }
+    footer > div {
+      width: 100vw;
+      text-align: center;
+      font-size: 14px;
+    }
+    .politicas{ /*coge el justificado ya definido*/
+        margin: 0 2.5em 6em 2.5em;
+    }
+}
+
+/*condiciona el mostrar y ocultar apartados con javaScript*/
+.escondido{
+    display: none;
+}
+/*cuando se despliega el formulario, el icono pierde opacidad*/
+.transparencia{
+    opacity: 0.5;
+}
+
+/*PÁGINA INDEX CON SUS ICONOS Y LA INFO DEBAJO*/
+.dosIconos {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding: 2em;
+}
+.dosIconos figure { 
+    width: 232px;
+    padding: 2.3em;
+}
+.dosIconos img {
+    width: 80%;
+}
+figcaption{
+    color:white;
+    background: black;
+    border: 2px solid white;
+    padding: 1.2em;
+    text-align: center;
+}
+/*PÁGINA USUARIOS, SE MODIFICA FIGURE Y FIGCAPTION USANDO LOS ID*/
+figure#tienda, figure#foro {
+    text-align: center;
+}
+figure#tienda img, figure#foro img{
+    cursor: pointer;
+}
+/*se añade un filtro de contraste al pasar por encima con el ratón*/
+figure#tienda img:hover, figure#foro img:hover{
+    filter: contrast(180%);
+}
+figure#tienda figcaption, figure#foro figcaption {
+    border: none;
+    background: none;
+    padding: 0;
+}
+div#zonatienda.formulario, div#zonaforo.formulario {
+    margin: 0;
+}
+section.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+/*presentación datos en foro y tienda*/
+.tabla td{
+    background-color: #ffffff;
+    padding: 1em;
+    text-align: left;
+}
+/*arreglo las celdas de las tablas para móvil y tablet*/
+@media only screen and (max-width: 768px){
+    .tabla td{
+    padding: 0em;
+    text-align: center;
+    }
+}
+
+.tabla th{
+    color: #ffffff;
+    background-color: #b7418c;
+}
+.tabla form input[type="submit"] {
+    background-color: #d6b832;
+    border: 1px solid #9b7f02;
+    border-radius: 5px;
+    padding: 0.4em;
+    cursor:pointer;
+}
